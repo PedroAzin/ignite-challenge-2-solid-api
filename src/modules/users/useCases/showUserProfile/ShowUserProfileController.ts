@@ -14,7 +14,7 @@ class ShowUserProfileController {
       return response.status(200).send(user);
     } catch (error) {
       return response.status(404).send({
-        error,
+        error: error.message,
       });
     }
   }
